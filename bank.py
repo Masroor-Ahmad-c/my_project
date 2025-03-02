@@ -1,17 +1,18 @@
 
-def bank(action):
-    tot_bal=int(input("tot bal:"))
-    amount=int(input("enter amount:"))
+def bank(action,tot_bal):
     match action:
         case "deposit":
+            amount=int(input("enter amount:"))
             print(tot_bal + amount)
         case "withdraw":
+            amount=int(input("enter amount:"))
             print(tot_bal - amount)
         case "balance":
             print(tot_bal)
 
 def main():
+    bal=int(input("tot bal:"))
     action=input("enter an action:")
-    bank(action)
+    bank(action,bal)
         
 main()
